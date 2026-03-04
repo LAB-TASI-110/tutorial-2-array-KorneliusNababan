@@ -43,6 +43,7 @@ int main() {
             return 1; // Keluar dengan kode error
         }
 
+        
         // Simpan dua bilangan data pertama untuk perhitungan rata-rata
         if (i == 0) {
             first_data_for_avg = num;

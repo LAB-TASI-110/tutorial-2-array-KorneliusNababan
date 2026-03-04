@@ -2,6 +2,7 @@
 #include <stdio.h> // Untuk fungsi input/output seperti printf dan scanf
 #include <limits.h> // Untuk INT_MAX dan INT_MIN
 
+
 int main() {
     int n; // Variabel untuk menyimpan jumlah bilangan yang akan dimasukkan
     int num; // Variabel untuk menyimpan setiap bilangan yang dimasukkan
