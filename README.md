@@ -64,31 +64,31 @@ Nilai di atas merupakan nilai rata-rata dari elemen pertama dan kedua (berurutan
 
 ## Tugas 3 (t03_03.c, 40 points)
 
-Dengan melanjutkan pekerjaan anda pada Tugas 2, tambahkan sebaris keluaran yang menampilkan **nilai rata-rata tertinggi** dari dua nilai yang dimasukkan berturut dengan 2 digit nilai presisi.
+    Dengan melanjutkan pekerjaan anda pada Tugas 2, tambahkan sebaris keluaran yang menampilkan **nilai rata-rata tertinggi** dari dua nilai yang dimasukkan berturut dengan 2 digit nilai presisi.
 
-Perhatikan contoh masukan berikut.
-```bash
-8
-8
--3
-16
-77
--3
-10
-33
--7
+    Perhatikan contoh masukan berikut.
+    ```bash
+    8
+    8
+    -3
+    16
+    77
+    -3
+    10
+    33
+    -7
 
-```
+    ```
 
-Berikut adalah contoh luaran yang dihasilkan:
+    Berikut adalah contoh luaran yang dihasilkan:
 
-```bash
--7
-77
-2.50
-46.50
+    ```bash
+    -7
+    77
+    2.50
+    46.50
 
-```
+    ```
 
 Nilai di atas merupakan nilai rata-rata dari elemen ketiga dan keempat (berurutan).
 
