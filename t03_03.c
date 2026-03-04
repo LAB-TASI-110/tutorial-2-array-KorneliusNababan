@@ -1,43 +1,33 @@
 #include <stdio.h>
+#include <limits.h>
 
 int main() {
-    int current, previous;
-    int first_input = 1;
-    int min, max;
-    float max_avg = -999999.0; // Inisialisasi dengan nilai sangat kecil
+    int n, num, prev;
+    int min_val = INT_MAX;
+    int max_val = INT_MIN;
+    float min_avg = 1e9;  // Untuk mencari yang terkecil
+    float max_avg = -1e9; // Untuk mencari yang terbesar
 
-    while (scanf("%d", &current) != EOF) {
-        // Tentukan nilai sentinel untuk berhenti, misal -7 sesuai contoh
-        if (current == -7) {
-            if (!first_input) {
-                // Cetak hasil akhir sebelum keluar
-                printf("%d\n", min);
-                printf("%d\n", max);
-                printf("%.2f\n", max_avg);
-            }
-            break;
+    if (scanf("%d", &n) != 1) return 0;
+
+    for (int i = 0; i < n; i++) {
+        if (scanf("%d", &num) != 1) break;
+
+        if (num < min_val) min_val = num;
+        if (num > max_val) max_val = num;
+
+        if (i > 0) {
+            float current_avg = (float)(prev + num) / 2.0;
+            if (current_avg < min_avg) min_avg = current_avg;
+            if (current_avg > max_avg) max_avg = current_avg;
         }
-
-        if (first_input) {
-            min = current;
-            max = current;
-            first_input = 0;
-        } else {
-            // Update Minimum dan Maximum
-            if (current < min) min = current;
-            if (current > max) max = current;
-
-            // Hitung rata-rata dari dua nilai berurutan
-            float current_avg = (float)(previous + current) / 2.0;
-            
-            // Update rata-rata tertinggi
-            if (current_avg > max_avg) {
-                max_avg = current_avg;
-            }
-        }
-        
-        previous = current;
+        prev = num;
     }
+
+    printf("%d\n", min_val);
+    printf("%d\n", max_val);
+    printf("%.2f\n", min_avg);
+    printf("%.2f\n", max_avg);
 
     return 0;
 }
